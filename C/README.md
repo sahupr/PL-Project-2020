@@ -1,6 +1,6 @@
 # Compile and Run
 ## Compile
-Task 2: `gcc task2.c json-parser/json.c -o task2 -lm`
+Task 2: `gcc task2.c json-parser/json.c -o task2 -lm`\
 Task 3: `gcc task3.c json-parser/json.c -o task3 -lm`
 ## Run
 Task 2: `./task2`
