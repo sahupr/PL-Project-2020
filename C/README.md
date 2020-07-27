@@ -3,7 +3,7 @@
 Task 2: `gcc task2.c json-parser/json.c -o task2 -lm`\
 Task 3: `gcc task3.c json-parser/json.c -o task3 -lm`
 ## Run
-Task 2: `./task2`
+Task 2: `./task2`\
 Task 3: `./task3`
 ## Example Run with Input
 Task 2: `echo '{"geometric_shapes":[[1,0,0,1,1],[1,1,1,2,2],[1,1,6,1,8]],"sizex":10,"sizey":10}' | ./task2`\
