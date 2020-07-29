@@ -56,7 +56,7 @@ def draw():
             elif matrix[i][j] == 2:
                 color = (0, 0, 255)
             pixels[j, i] = color
-    image = image.resize((10000, 10000), resample=Image.BOX)
+    image = image.resize((1000, 1000), resample=Image.BOX)
     image.save('./output.png')
 
 

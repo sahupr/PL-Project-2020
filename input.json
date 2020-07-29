@@ -32,8 +32,8 @@
 
     "input3": {
         "startx": 0,
-        "starty": 2,
-        "endx": 2,
-        "endy": 9
+        "starty": 0,
+        "endx": 499,
+        "endy": 499
     }
 }
