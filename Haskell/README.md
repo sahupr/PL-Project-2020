@@ -1,6 +1,6 @@
 # Dependencies
-* [aeson][https://hackage.haskell.org/package/aeson]
-* [Data.ByteString.Lazy.UTF8][https://downloads.haskell.org/~ghc/6.12.1/docs/html/libraries/utf8-string-0.3.4/Data-ByteString-Lazy-UTF8.html]
+* [aeson](https://hackage.haskell.org/package/aeson)
+* [utf8-string](https://hackage.haskell.org/package/utf8-string)
 # Compile and Run
 ## Compile
 * Task 4: `ghc task4.hs`
