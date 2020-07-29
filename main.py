@@ -13,10 +13,10 @@ class Task:
 
     def run(self, *inps):
         # print('\n', self.name)
-        if not path.exists(self.cmd + '.exe') and path.exists(self.cmd + '.c'):
+        if not path.exists(self.cmd) and path.exists(self.cmd + '.c'):
             subprocess.run(
                 ['gcc', self.cmd + '.c', './bin/C/json-parser/json.c', '-o', self.cmd, '-lm', '-w'])
-        if not path.exists(self.cmd + '.exe') and path.exists(self.cmd + '.hs'):
+        if not path.exists(self.cmd) and path.exists(self.cmd + '.hs'):
             subprocess.run(['ghc', self.cmd + '.hs'])
         for inp in inps:
             with open('./temp/' + inp, 'r') as f:
@@ -29,7 +29,7 @@ class Task:
         json_str = json.dumps(self.data)
         # print(json_str)
         p = subprocess.Popen(
-            self.cmd + '.exe', stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+            self.cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
         with p.stdin:
             p.stdin.write(json_str.encode())
         output = p.stdout.read()
@@ -37,6 +37,7 @@ class Task:
             json.dump(json.loads(output), f)
 
 
+# Function to draw pixel image of finished output
 def draw():
     with open('./output.json') as f:
         d = json.load(f)
