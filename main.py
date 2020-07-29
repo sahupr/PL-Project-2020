@@ -3,6 +3,7 @@ from os import path, listdir, remove
 from shutil import copy
 import subprocess
 from PIL import Image
+import sys
 
 
 class Task:
@@ -20,10 +21,7 @@ class Task:
             subprocess.run(['ghc', self.cmd + '.hs'])
         for inp in inps:
             with open('./temp/' + inp, 'r') as f:
-                if '.json' in inp:
-                    self.data.update(json.load(f))
-                else:
-                    self.data = f.readlines()
+                self.data.update(json.load(f))
             # print(type(self.data))
             # print(self.data)
         json_str = json.dumps(self.data)
