@@ -113,19 +113,24 @@ void find_path(int* pathx, int* pathy, int* path_len, int** spread_matrix, int s
         }
     }
 
-    pathx[0] = startx;
-    pathy[0] = starty;
-    *path_len = 1;
-    x = startx;
-    y = starty;
-    while(x != endx || y != endy) {
-        xx = parx[x][y];
-        yy = pary[x][y];
-        pathx[*path_len] = xx;
-        pathy[*path_len] = yy;
-        (*path_len)++;
-        x = xx;
-        y = yy;
+    if(parx[startx][starty] == -1) {
+        *path_len = 0;
+    }
+    else {
+        pathx[0] = startx;
+        pathy[0] = starty;
+        *path_len = 1;
+        x = startx;
+        y = starty;
+        while(x != endx || y != endy) {
+            xx = parx[x][y];
+            yy = pary[x][y];
+            pathx[*path_len] = xx;
+            pathy[*path_len] = yy;
+            (*path_len)++;
+            x = xx;
+            y = yy;
+        }
     }
 
     for(int i = 0; i < sizex; i++) {
