@@ -26,14 +26,14 @@
         "hy": 9
     },
     "input2": {
-        "sizex": 500,
+        "sizex": 200,
         "sizey": 500
     },
 
     "input3": {
         "startx": 0,
         "starty": 0,
-        "endx": 499,
+        "endx": 199,
         "endy": 499
     }
 }
