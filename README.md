@@ -6,14 +6,18 @@ Project for CS3003
 
 ### Haskell
 
--   ghc compiler for Haskell
+-   ghc compiler
 
 -   [aeson](https://hackage.haskell.org/package/aeson)
 -   [utf8-string](https://hackage.haskell.org/package/utf8-string)
 
 ### C
 
--   gcc compiler for C
+-   gcc compiler
+
+### Prolog
+
+-   SWI-Prolog compiler
 
 ## Run
 
