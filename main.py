@@ -69,13 +69,13 @@ with open('input.json') as f:
     # print(inp)
 
 # Create task objects
-# task1 = Task('1', 'echo')
+task1 = Task('1', 'swipl ./bin/Prolog/task1.pl')
 task2 = Task('2', './bin/C/task2')
 task3 = Task('3', './bin/C/task3')
 task4 = Task('4', './bin/Haskell/task4')
 
 # Run all task in sequence
-# task1.run('input1.json')
+task1.run('input1.json')
 task2.run('output1.json', 'input2.json')
 task3.run('output2.json', 'input3.json')
 task4.run('output3.json', 'output2.json')
@@ -85,7 +85,7 @@ copy('./temp/output4.json', './output.json')
 
 # Delete temp files
 # output1.json is kept because Task1 is not implemented
-templist = [f for f in listdir('./temp/') if 'output1' not in f]
+templist = [f for f in listdir('./temp/')]
 for f in templist:
     remove(path.join('./temp/', f))
 
