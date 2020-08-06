@@ -27,7 +27,7 @@ class Task:
         json_str = json.dumps(self.data)
         # print(json_str)
         p = subprocess.Popen(
-            self.cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+            self.cmd.split(), stdin=subprocess.PIPE, stdout=subprocess.PIPE)
         with p.stdin:
             p.stdin.write(json_str.encode())
         output = p.stdout.read()
